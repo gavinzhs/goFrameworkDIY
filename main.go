@@ -23,25 +23,34 @@ func main() {
 	//	log.Printf("%p", ss)
 	//	log.Printf("%p", &ss)
 
-	a := []int{1, 2, 3}
+	//	a := []int{1, 2, 3}
+	//
+	//	log.Printf("%T", a)
+	//	log.Printf("%p", &a)
+	//	test(a)
+	//
+	//	bb := [3]int{1, 2, 3}
+	//	aa := AA{p: &bb, len: 3, cap: 3}
+	//	log.Printf("%p", &aa)
+	//	test1(&aa)
 
-	log.Printf("%T", a)
-	log.Printf("%p", &a)
-	test(a)
-
-	bb := [3]int{1, 2, 3}
-	aa := AA{p: &bb, len: 3, cap: 3}
-	log.Printf("%p", &aa)
-	test1(&aa)
+	s := "aaaD"
+	ss := &s
+	log.Printf("%q", ss)
+	test(ss)
 }
 
-func test(a []int) {
-	log.Printf("%p", a)
-	log.Printf("%p", &a)
-	a = nil
-	log.Printf("%p", a)
-	log.Printf("%p", &a)
+func test(s *string) {
+	log.Printf("%q", *s)
 }
+
+//func test(a []int) {
+//	log.Printf("%p", a)
+//	log.Printf("%p", &a)
+//	a = nil
+//	log.Printf("%p", a)
+//	log.Printf("%p", &a)
+//}
 
 func test1(aa *AA) {
 	log.Printf("%p", &aa)
